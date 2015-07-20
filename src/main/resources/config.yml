@@ -1,0 +1,14 @@
+game:
+  minPlayers: 2
+  maxPlayers: 16
+  time: 3600
+  world: world
+  spawnLocations:
+  - world 0.0 100.0 0.0
+  - world 0.0 100.0 0.0
+  blockTypes:
+  - STAINED_CLAY
+  countdown: 5
+  spectatorLocation: world 296.7603637843681 81.89462072519612 111.86146012673565
+  schematicLocation: world 0 100 0
+  
