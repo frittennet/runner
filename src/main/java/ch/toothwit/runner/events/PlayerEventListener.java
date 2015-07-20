@@ -1,4 +1,4 @@
-package de.fredo121.runner.events;
+package ch.toothwit.runner.events;
 
 import org.bukkit.Location;
 import org.bukkit.block.Block;
@@ -11,11 +11,11 @@ import org.bukkit.event.entity.EntityDamageEvent;
 import org.bukkit.event.player.PlayerMoveEvent;
 import org.bukkit.event.player.PlayerQuitEvent;
 
-import de.fredo121.runner.game.Game;
-import de.fredo121.runner.game.GamePlayer;
-import de.fredo121.runner.game.GameSettings;
-import de.fredo121.runner.game.GameState;
-import de.fredo121.runner.game.TriggeredBlock;
+import ch.toothwit.runner.game.Game;
+import ch.toothwit.runner.game.GamePlayer;
+import ch.toothwit.runner.game.GameSettings;
+import ch.toothwit.runner.game.GameState;
+import ch.toothwit.runner.game.TriggeredBlock;
 
 public class PlayerEventListener implements Listener { 
 	@EventHandler (priority=EventPriority.LOW)

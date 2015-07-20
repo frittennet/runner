@@ -1,11 +1,11 @@
-package de.fredo121.runner.game;
+package ch.toothwit.runner.game;
 
 import org.bukkit.Material;
 import org.bukkit.block.Block;
 import org.bukkit.metadata.FixedMetadataValue;
 import org.bukkit.scheduler.BukkitRunnable;
 
-import de.fredo121.runner.main.Runner;
+import ch.toothwit.runner.main.Runner;
 
 public class TriggeredBlock { 
 	public static String metaname; 

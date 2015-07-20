@@ -1,4 +1,4 @@
-package de.fredo121.runner.game;
+package ch.toothwit.runner.game;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -8,12 +8,13 @@ import org.bukkit.GameMode;
 import org.bukkit.Location;
 import org.bukkit.entity.Player;
 import org.bukkit.scheduler.BukkitRunnable;
-import org.bukkit.Bukkit; 
 
-import de.fredo121.lobby.main.LobbyAPI;
-import de.fredo121.lobby.main.LobbyEventHandler;
-import de.fredo121.runner.main.Runner;
-import de.fredo121.runner.main.Util;
+import ch.toothwit.lobby.main.LobbyAPI;
+import ch.toothwit.lobby.main.LobbyEventHandler;
+import ch.toothwit.runner.main.Runner;
+import ch.toothwit.runner.main.Util;
+
+import org.bukkit.Bukkit;
 
 public class Game implements LobbyEventHandler {
 	private GameState gameState = GameState.LOBBY;

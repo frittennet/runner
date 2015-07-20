@@ -1,4 +1,4 @@
-package de.fredo121.runner.main;
+package ch.toothwit.runner.main;
 
 import java.io.ByteArrayOutputStream;
 import java.io.DataOutputStream;
@@ -7,8 +7,8 @@ import org.bukkit.Bukkit;
 import org.bukkit.entity.Player;
 import org.bukkit.scheduler.BukkitRunnable;
 
-import de.fredo121.runner.game.Game; 
-import de.fredo121.runner.game.GamePlayer; 
+import ch.toothwit.runner.game.Game;
+import ch.toothwit.runner.game.GamePlayer; 
 
 public class Util {
 	public static void SendToBungeeServer(final String server, final Player player) { 

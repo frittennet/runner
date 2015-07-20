@@ -1,4 +1,4 @@
-package de.fredo121.runner.game;
+package ch.toothwit.runner.game;
 
 import java.io.File;
 import java.io.IOException;
@@ -10,8 +10,7 @@ import org.bukkit.Location;
 import org.bukkit.Material; 
 import org.bukkit.configuration.file.FileConfiguration;
 
-
-import de.fredo121.runner.main.Runner;
+import ch.toothwit.runner.main.Runner;
 
 public class GameSettings {
 	private static GameSettings instance; 

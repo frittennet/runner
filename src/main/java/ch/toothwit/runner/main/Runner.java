@@ -1,4 +1,4 @@
-package de.fredo121.runner.main;
+package ch.toothwit.runner.main;
 
 import org.bukkit.Location;
 import org.bukkit.Material;
@@ -6,13 +6,14 @@ import org.bukkit.command.Command;
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
 import org.bukkit.plugin.java.JavaPlugin;
+
+import ch.toothwit.runner.events.EntityEventListener;
+import ch.toothwit.runner.events.PlayerEventListener;
+import ch.toothwit.runner.game.GameSettings;
+import ch.toothwit.runner.main.StructureAPI;
+
 import org.bukkit.block.Block; 
 import org.bukkit.Bukkit; 
-
-import de.fredo121.runner.events.PlayerEventListener;
-import de.fredo121.runner.events.EntityEventListener;
-import de.fredo121.runner.game.GameSettings; 
-import de.fredo121.runner.main.StructureAPI; 
 
 public class Runner extends JavaPlugin {
 	private static Runner instance;

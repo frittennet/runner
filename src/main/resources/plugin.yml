@@ -1,5 +1,5 @@
 name: Runner
-main: de.fredo121.runner.main.Runner
+main: ch.toothwit.runner.main.Runner
 version: 1.0
 author: fredo121
 description: Runner Plugin using Spigot API 

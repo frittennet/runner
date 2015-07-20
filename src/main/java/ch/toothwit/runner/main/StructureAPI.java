@@ -1,17 +1,17 @@
-package de.fredo121.runner.main; 
+package ch.toothwit.runner.main; 
 
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.ObjectInputStream;
-import java.io.ObjectOutputStream; 
- 
-import de.fredo121.runner.main.Runner; 
- 
+import java.io.ObjectOutputStream;
+
 import org.bukkit.Location;
 import org.bukkit.block.Block;
 import org.bukkit.plugin.Plugin;
+
+import ch.toothwit.runner.main.Runner;
  
 public class StructureAPI {
     private static StructureAPI instance; 
@@ -94,7 +94,7 @@ public class StructureAPI {
     * Save a structure with a desired name
     */
  
-    public void save(String name, int[][][] b){
+    public void save(String name, String[][][] b){
         ObjectOutputStream oos = null;
         FileOutputStream fout = null;
  

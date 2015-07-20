@@ -1,6 +1,6 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
-  <groupId>de.fredo121</groupId>
+  <groupId>ch.toothwit</groupId>
   <artifactId>runner</artifactId>
   <version>0.1</version>
   <name>Runner</name>
@@ -33,11 +33,9 @@
       <version>1.8.7-R0.1-SNAPSHOT</version>
     </dependency>
     <dependency>
-      <groupId>de.fredo121</groupId>
+      <groupId>ch.toothwit</groupId>
       <artifactId>lobby</artifactId>
-      <version>0.1</version>
-      <scope>system</scope>
-      <systemPath>${project.basedir}/../lobby/target/lobby-0.1.jar</systemPath>
+      <version>LATEST</version>
 	</dependency>
 	<dependency>
       <groupId>me.confuser</groupId>

@@ -1,4 +1,4 @@
-package de.fredo121.runner.game;
+package ch.toothwit.runner.game;
 
 import org.bukkit.entity.Player;            
 
