@@ -1,7 +1,6 @@
 package ch.toothwit.runner.events; 
 
 import ch.toothwit.runner.game.Game; 
-import ch.toothwit.runner.game.GameState;
 import org.bukkit.event.Listener; 
 import org.bukkit.ChatColor;
 import org.bukkit.event.EventHandler;

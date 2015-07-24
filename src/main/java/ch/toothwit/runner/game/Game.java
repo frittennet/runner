@@ -46,7 +46,7 @@ public class Game implements LobbyEventHandler {
 			playerDeathOrder.add(getAliveGamePlayers().get(0)); 
 			finishGame(); 
 		}
-	}
+	} 
 	
 	public List<GamePlayer> getDeadGamePlayers(){
 		List<GamePlayer> list = new ArrayList<GamePlayer>(); 
@@ -105,8 +105,8 @@ public class Game implements LobbyEventHandler {
 		
 		gameState = GameState.PREPARATION; 
 		spawnPlayers(); 
-		Bukkit.broadcastMessage(ChatColor.GOLD+"Preparing "+ChatColor.RED+GameSettings.get().getGameCountdown()+ChatColor.GOLD+" seconds. ");  
-		Util.displayCountdown(GameSettings.get().getGameCountdown(), GameSettings.get().getGameCountdown(), "Prepare: "+ChatColor.RED); 
+		Bukkit.broadcastMessage(ChatColor.GOLD+"Schutzzeit "+ChatColor.RED+GameSettings.get().getGameCountdown()+" Sekunden"+ChatColor.GOLD+".");  
+		Util.displayCountdown(GameSettings.get().getGameCountdown(), GameSettings.get().getGameCountdown(), "Vorbereitung: "+ChatColor.RED); 
 		new BukkitRunnable() {
 			
 			public void run() {
@@ -117,19 +117,19 @@ public class Game implements LobbyEventHandler {
 	
 	private void endPrepare(){
 		gameState = GameState.RUNNING; 
-		Bukkit.broadcastMessage(ChatColor.GOLD+"Game started!!!"); 
+		Bukkit.broadcastMessage(ChatColor.GOLD+"Spiel gestartet!!!"); 
 	} 
 	
 	private void finishGame(){ 
 		gameState = GameState.FINISHED; 
 		int n=playerDeathOrder.size(); 
-		Bukkit.broadcastMessage(ChatColor.GOLD+"============="+ChatColor.RED+"Ranking"+ChatColor.GOLD+"============");
+		Bukkit.broadcastMessage(ChatColor.GOLD+"============="+ChatColor.RED+"Platzierung"+ChatColor.GOLD+"=========");
 		for(GamePlayer gamePlayer : playerDeathOrder){
 			Bukkit.broadcastMessage(ChatColor.RED+"        "+n+""+ChatColor.GOLD+". "+gamePlayer.getPlayer().getName());
 			n--; 
 		}
 		Bukkit.broadcastMessage(ChatColor.GOLD+"================================"); 
-		Bukkit.broadcastMessage("Kehre in "+ChatColor.RED+"5 Sekunden"+ChatColor.GOLD+" zur Lobby zurueck."); 
+		Bukkit.broadcastMessage("Teleportiere in "+ChatColor.RED+"5 Sekunden"+ChatColor.GOLD+" zur Lobby ."); 
 		new BukkitRunnable() {
 			
 			public void run() {
