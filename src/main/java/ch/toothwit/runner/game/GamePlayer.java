@@ -10,6 +10,8 @@ public class GamePlayer {
 	
 	public GamePlayer(Player player){
 		this.player = player; 
+		this.player.setSaturation(20f); 
+		this.player.setHealth(20f); 
 	} 
 	
 	public Player getPlayer(){
