@@ -7,8 +7,6 @@ import org.bukkit.Bukkit;
 import org.bukkit.entity.Player;
 import org.bukkit.scheduler.BukkitRunnable;
 
-import ch.toothwit.runner.game.Game;
-import ch.toothwit.runner.game.GamePlayer; 
 
 public class Util {
 	public static void SendToBungeeServer(final String server, final Player player) { 

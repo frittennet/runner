@@ -1,5 +1,6 @@
 package ch.toothwit.runner.events;
 
+import org.bukkit.GameMode;
 import org.bukkit.Location;
 import org.bukkit.block.Block;
 import org.bukkit.entity.EntityType;
@@ -7,7 +8,8 @@ import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.EventPriority;
 import org.bukkit.event.Listener;
-import org.bukkit.event.entity.EntityDamageEvent; 
+import org.bukkit.event.entity.EntityDamageEvent;
+import org.bukkit.event.player.PlayerJoinEvent;
 import org.bukkit.event.player.PlayerMoveEvent;
 import org.bukkit.event.player.PlayerQuitEvent;
 
@@ -21,6 +23,15 @@ public class PlayerEventListener implements Listener {
 	@EventHandler (priority=EventPriority.LOW)
 	public void onPlayerQuitEvent(PlayerQuitEvent event){
 		Game.get().removeGamePlayer(event.getPlayer()); 
+	}
+	
+	@EventHandler 
+	public void onPlayerJoinEvent(PlayerJoinEvent event){
+		if(Game.get().getGameState() != GameState.LOBBY){ 
+			Player player = event.getPlayer(); 
+			player.setGameMode(GameMode.SPECTATOR); 
+			player.teleport(GameSettings.get().getSpectatorLocation()); 
+		}
 	}
 	
 	@EventHandler

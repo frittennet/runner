@@ -5,12 +5,8 @@ import org.bukkit.event.entity.EntityChangeBlockEvent;
 
 import ch.toothwit.runner.game.Game;
 import ch.toothwit.runner.game.GamePlayer;
-import ch.toothwit.runner.game.GameSettings;
-import ch.toothwit.runner.game.GameState;
-import ch.toothwit.runner.game.TriggeredBlock;
 
 import org.bukkit.event.EventHandler;
-import org.bukkit.event.Listener;
 import org.bukkit.entity.EntityType;
 
 public class EntityEventListener implements Listener {

@@ -129,5 +129,14 @@ public class Game implements LobbyEventHandler {
 			n--; 
 		}
 		Bukkit.broadcastMessage(ChatColor.GOLD+"================================"); 
+		Bukkit.broadcastMessage("Kehre in "+ChatColor.RED+"5 Sekunden"+ChatColor.GOLD+" zur Lobby zurueck."); 
+		new BukkitRunnable() {
+			
+			public void run() {
+				for(Player player : Bukkit.getOnlinePlayers()){
+					Util.SendToBungeeServer(LobbyAPI.getBungeeLobbyServer(), player); 
+				} 
+			}
+		}.runTaskLater(Runner.get(), 5*20L);
 	} 
 } 

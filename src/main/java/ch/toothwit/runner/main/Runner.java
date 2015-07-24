@@ -9,6 +9,8 @@ import org.bukkit.plugin.java.JavaPlugin;
 
 import ch.toothwit.runner.events.EntityEventListener;
 import ch.toothwit.runner.events.PlayerEventListener;
+import ch.toothwit.runner.events.ServerEventListener;
+import ch.toothwit.runner.events.WeatherEventListener;
 import ch.toothwit.runner.game.GameSettings;
 import ch.toothwit.runner.main.StructureAPI;
 
@@ -32,7 +34,9 @@ public class Runner extends JavaPlugin {
 	@Override
 	public void onEnable() {
 		getServer().getPluginManager().registerEvents(new PlayerEventListener(), this);
-		getServer().getPluginManager().registerEvents(new EntityEventListener(), this);
+		getServer().getPluginManager().registerEvents(new EntityEventListener(), this); 
+		getServer().getPluginManager().registerEvents(new WeatherEventListener(), this); 
+		getServer().getPluginManager().registerEvents(new ServerEventListener(), this); 
 		this.getServer().getMessenger().registerOutgoingPluginChannel(this, "BungeeCord");
 
 		try {
