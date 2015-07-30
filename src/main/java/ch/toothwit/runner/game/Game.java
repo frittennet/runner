@@ -9,10 +9,7 @@ import org.bukkit.Location;
 import org.bukkit.entity.Player;
 import org.bukkit.scheduler.BukkitRunnable;
 import org.bukkit.Bukkit; 
-import org.bukkit.plugin.Plugin; 
-import org.bukkit.plugin.PluginManager; 
 
-import ch.toothwit.lobby.main.Lobby;
 import ch.toothwit.lobby.main.LobbyAPI;
 import ch.toothwit.lobby.main.LobbyEventHandler;
 import ch.toothwit.runner.main.Runner;

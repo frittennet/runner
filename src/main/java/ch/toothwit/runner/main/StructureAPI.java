@@ -32,7 +32,8 @@ public class StructureAPI {
     * Get all blocks between two points and return a 3d array
     */
  
-    public String[][][] getStructure(Block block, Block block2){
+    @SuppressWarnings("deprecation")
+	public String[][][] getStructure(Block block, Block block2){
         int minX, minZ, minY;
         int maxX, maxZ, maxY;
  
@@ -69,7 +70,8 @@ public class StructureAPI {
     * Pastes a structure to a desired location
     */
  
-    public void paste(String[][][] blocks, Location l){
+    @SuppressWarnings("deprecation")
+	public void paste(String[][][] blocks, Location l){
         for(int x = 0; x < blocks.length; x++){
  
             for(int y = 0; y < blocks[x].length; y++){
