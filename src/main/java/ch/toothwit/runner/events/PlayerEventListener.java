@@ -39,21 +39,26 @@ public class PlayerEventListener implements Listener {
 	} 
 	
 	@EventHandler
-	public void onEntityDamageEvent(EntityDamageEvent event) {
-		if (event.getEntityType() == EntityType.PLAYER) { 
-			GamePlayer gamePlayer = Game.get().getGamePlayer((Player)event.getEntity()); 
-			GameState gameState = Game.get().getGameState(); 
-			
-			if(gamePlayer != null && (event.getCause() == EntityDamageEvent.DamageCause.VOID || (gamePlayer.getPlayer().getHealth() - event.getDamage() <= 0))){ 
-				if ((gameState == GameState.RUNNING || gameState == GameState.PREPARATION)) { 
-					Game.get().onPlayerDie(gamePlayer); 
-					event.setCancelled(true); 
-				} 
-				else {
-					event.setCancelled(true); 	
+	public void onEntityDamageEvent(EntityDamageEvent event) { 
+		if(Game.get().getGameState() == GameState.RUNNING){
+			if (event.getEntityType() == EntityType.PLAYER) { 
+				GamePlayer gamePlayer = Game.get().getGamePlayer((Player)event.getEntity()); 
+				GameState gameState = Game.get().getGameState(); 
+				
+				if(gamePlayer != null && (event.getCause() == EntityDamageEvent.DamageCause.VOID || (gamePlayer.getPlayer().getHealth() - event.getDamage() <= 0))){ 
+					if ((gameState == GameState.RUNNING || gameState == GameState.PREPARATION)) { 
+						Game.get().onPlayerDie(gamePlayer); 
+						event.setCancelled(true); 
+					} 
+					else {
+						event.setCancelled(true); 	
+					} 
 				} 
 			} 
-		} 
+		}
+		else{
+			event.setCancelled(true); 
+		}
 	} 
 	
 	@EventHandler

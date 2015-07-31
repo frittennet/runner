@@ -32,15 +32,20 @@ public class Util {
 	} 
 	
 	public static void displayCountdown(final int currentSeconds, final int startSeconds, final String message){ 
-		for(Player player : Bukkit.getServer().getOnlinePlayers()){
-			player.setLevel(currentSeconds); 
-		}
-		new BukkitRunnable() {
-			
-			public void run() {
-				displayCountdown(currentSeconds-1, startSeconds, message);  
+		if(currentSeconds > 0){
+			for(Player player : Bukkit.getServer().getOnlinePlayers()){
+				player.setLevel(currentSeconds); 
 			}
-		}.runTaskLater(Runner.get(), 20L);
+			new BukkitRunnable() {
+				
+				public void run() {
+					displayCountdown(currentSeconds-1, startSeconds, message);  
+				}
+			}.runTaskLater(Runner.get(), 20L);
+		}
+		else{
+			hideCountdown(); 
+		}
 	} 
 	
 	public static void hideCountdown(){

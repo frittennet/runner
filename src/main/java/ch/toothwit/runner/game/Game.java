@@ -122,7 +122,7 @@ public class Game implements LobbyEventHandler {
 		
 		gameState = GameState.PREPARATION; 
 		spawnPlayers(); 
-		Bukkit.broadcastMessage(ChatColor.GOLD+"Vorbereitung "+ChatColor.RED+GameSettings.get().getGameCountdown()+ChatColor.GOLD+" seconds. ");  
+		Bukkit.broadcastMessage(ChatColor.GOLD+"Vorbereitung "+ChatColor.RED+GameSettings.get().getGameCountdown()+ChatColor.GOLD+" Sekunden. ");  
 		Util.displayCountdown(GameSettings.get().getGameCountdown(), GameSettings.get().getGameCountdown(), "Prepare "+ChatColor.RED); 
 		new BukkitRunnable() {
 			
