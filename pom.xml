@@ -42,5 +42,12 @@
       <artifactId>lobby</artifactId>
       <version>LATEST</version>
 	</dependency>
+	<dependency>
+    	<groupId>org.inventivetalent</groupId>
+    	<artifactId>bossbar.BossBarAPI</artifactId>
+    	<version>2.3.8</version>
+    	<scope>system</scope>
+    	<systemPath>${project.basedir}/lib/BossBarAPI.jar</systemPath>
+	</dependency>
   </dependencies>
 </project>
