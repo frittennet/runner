@@ -63,7 +63,7 @@ public class PlayerEventListener implements Listener {
 	
 	@EventHandler
 	public void onPlayerMoveEvent(PlayerMoveEvent event) {
-		if (Game.get().getGameState() == GameState.RUNNING && event.getPlayer().getGameMode() != GameMode.SPECTATOR) { 
+		if (Game.get().getGameState() == GameState.RUNNING) {
 			new TriggeredBlock(event.getPlayer().getLocation().subtract(0d, 1d, 0d)); 
 		}
 	}                

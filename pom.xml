@@ -19,35 +19,24 @@
   <repositories>
     <repository>
       <id>spigot-repo</id>
-      <url>https://hub.spigotmc.org/nexus/content/repositories/snapshots/</url>
+      <url>https://hub.spigotmc.org/nexus/content/groups/public/</url>
     </repository>
-    <repository> 
-      <id>toothwitch-repo</id>
-      <url>https://plugin-repo.toothwit.ch</url>
-    </repository>
-    <repository>
-      <id>confuser-repo</id>
-      <url>http://ci.frostcast.net/plugin/repository/everything</url>
-    </repository>
+	<repository> 
+	  <id>toothwitch-repo</id>
+	  <url>http://plugin-repo.toothwit.ch</url>
+	</repository> 
   </repositories> 
   <dependencies>
     <dependency>
       <groupId>org.spigotmc</groupId>
       <artifactId>spigot-api</artifactId>
-      <version>1.9.2-R0.1-SNAPSHOT</version>
       <scope>provided</scope>
+      <version>1.8.7-R0.1-SNAPSHOT</version>
     </dependency>
     <dependency>
       <groupId>ch.toothwit</groupId>
       <artifactId>lobby</artifactId>
-      <version>LATEST</version>
-	</dependency>
-	<dependency>
-    	<groupId>org.inventivetalent</groupId>
-    	<artifactId>bossbar.BossBarAPI</artifactId>
-    	<version>2.3.8</version>
-    	<scope>system</scope>
-    	<systemPath>${project.basedir}/lib/BossBarAPI.jar</systemPath>
+      <version>latest</version>
 	</dependency>
   </dependencies>
 </project>

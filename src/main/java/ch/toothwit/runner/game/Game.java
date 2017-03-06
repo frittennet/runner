@@ -11,7 +11,7 @@ import org.bukkit.scheduler.BukkitRunnable;
 import org.bukkit.Bukkit; 
 
 import ch.toothwit.lobby.main.LobbyAPI;
-import ch.toothwit.lobby.main.LobbyEventHandler;
+import ch.toothwit.lobby.main.LobbyEventHandler; 
 import ch.toothwit.runner.main.Runner;
 import ch.toothwit.runner.main.Util;
 import ch.toothwit.runner.main.StructureAPI; 
